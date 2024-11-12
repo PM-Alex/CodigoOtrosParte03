@@ -1,0 +1,39 @@
+package org.generation.codigoOtrosParte3;
+
+public class Codigo6 {
+	
+	// Se añadio el método main
+	public static void main(String[] args) {
+	 
+		// Se eliminan los [] y el int del lado derecho
+		int n = 20;
+
+		// Se cambia i+ -> i++
+	    for (int i = 0; i < 20; i++) {
+	      n = (int)(Math.random() * 381) + 20;
+	      // Se cambia print -> out.println
+	      System.out.println(n + " ");
+	    } // for
+	    //Se cambia printl -> println
+	    System.out.println("\n¿Qué números quiere resaltar? ");
+	    // Se cambia print -> println
+	    System.out.println("(1 – los múltiplos de 5, 2 – los múltiplos de 7): ");
+	    // Se añade un ) al final de redLine()
+	    int opcion = Integer.parseInt(System.console().readLine());
+	    
+	    // Se cambia (opcion == 1) : 5 ? 7 - > (opcion == 1) ?  5 : 7;
+	    int multiplo = (opcion == 1) ?  5 : 7;
+	    
+	    // Se cambia for each - > for
+	    for (char e : n) {
+	      if (e % multiplo == 0) {
+	        System.out.println("[" + e + "] ");
+	       else {
+	        System.out.println(e + " ");
+	      }
+	    }
+	  
+	}
+		
+	}
+}
